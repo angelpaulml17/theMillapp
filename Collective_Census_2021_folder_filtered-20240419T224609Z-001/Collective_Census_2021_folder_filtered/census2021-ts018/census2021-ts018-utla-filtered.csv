@@ -1,0 +1,18 @@
+date,geography,geography code,Age of arrival in the UK: Total: All usual residents; measures: Value,Age of arrival in the UK: Born in the UK; measures: Value,Age of arrival in the UK: Arrived in the UK; measures: Value,Age of arrival in the UK: Arrived in the UK: Aged 0 to 4 years; measures: Value,Age of arrival in the UK: Arrived in the UK: Aged 5 to 7 years; measures: Value,Age of arrival in the UK: Arrived in the UK: Aged 8 to 9 years; measures: Value,Age of arrival in the UK: Arrived in the UK: Aged 10 to 14 years; measures: Value,Age of arrival in the UK: Arrived in the UK: Aged 15 years; measures: Value,Age of arrival in the UK: Arrived in the UK: Aged 16 to 17 years; measures: Value,Age of arrival in the UK: Arrived in the UK: Aged 18 to 19 years; measures: Value,Age of arrival in the UK: Arrived in the UK: Aged 20 to 24 years; measures: Value,Age of arrival in the UK: Arrived in the UK: Aged 25 to 29 years; measures: Value,Age of arrival in the UK: Arrived in the UK: Aged 30 to 44 years; measures: Value,Age of arrival in the UK: Arrived in the UK: Aged 45 to 59 years; measures: Value,Age of arrival in the UK: Arrived in the UK: Aged 60 to 64 years; measures: Value,Age of arrival in the UK: Arrived in the UK: Aged 65 to 74 years; measures: Value,Age of arrival in the UK: Arrived in the UK: Aged 75 to 84 years; measures: Value,Age of arrival in the UK: Arrived in the UK: Aged 85 to 89 years; measures: Value,Age of arrival in the UK: Arrived in the UK: Aged 90 years and over; measures: Value
+2021,Bolton,E08000001,295962,245907,50055,6476,3018,1892,4370,933,2198,3286,8398,6820,9494,2469,287,309,90,12,3
+2021,Bury,E08000002,193851,170444,23407,3444,1312,775,1697,378,895,1386,4059,3500,4526,1109,124,157,41,3,1
+2021,Manchester,E08000003,551938,378730,173208,18941,9157,5655,12408,2839,7910,11853,29498,26801,37397,8673,920,867,252,25,12
+2021,Oldham,E08000004,242089,201825,40264,5394,2614,1539,3621,712,1678,2777,6903,5376,7365,1775,224,207,62,14,3
+2021,Rochdale,E08000005,223770,189122,34648,4639,1992,1225,2882,630,1374,2261,6031,4954,6668,1578,189,172,43,7,3
+2021,Salford,E08000006,269919,218617,51302,5768,2350,1486,3403,777,1984,3492,9342,9168,10779,2239,275,186,47,5,1
+2021,Stockport,E08000007,294773,266918,27855,4206,1331,821,1727,396,1080,1584,4808,4636,5810,1060,167,159,59,8,3
+2021,Tameside,E08000008,231071,207201,23870,3194,1276,890,2053,416,1003,1419,4092,3412,4698,1144,108,122,36,2,5
+2021,Trafford,E08000009,235054,200116,34938,4870,1849,1090,2148,481,1264,1957,5905,6163,7467,1301,165,210,61,5,2
+2021,Wigan,E08000010,329331,308857,20474,2934,884,541,1242,263,682,1110,3619,3438,4584,995,85,79,14,3,1
+2021,Birmingham,E08000025,1144922,838959,305963,36045,17137,10763,25887,5622,14562,22386,55839,45727,56075,12143,1454,1727,473,85,38
+2021,Coventry,E08000026,345324,248991,96333,10065,4582,2717,6418,1548,4546,8368,18819,15684,18863,3837,383,358,112,25,8
+2021,Dudley,E08000027,323489,297930,25559,3136,1411,898,2102,460,1078,1695,4816,3818,4691,1131,125,149,44,4,1
+2021,Sandwell,E08000028,341831,261213,80618,7806,4065,2889,7041,1497,3406,5326,14846,12024,16207,4106,547,642,187,21,8
+2021,Solihull,E08000029,216239,193991,22248,3399,1221,765,1663,355,949,1333,3658,3530,4276,807,98,130,60,1,3
+2021,Walsall,E08000030,284124,242162,41962,4675,2258,1536,3495,732,1834,2937,7923,6258,7860,1883,218,261,77,15,0
+2021,Wolverhampton,E08000031,263727,203312,60415,5685,3139,2192,5251,1072,2534,3867,10849,9178,12516,3099,408,484,123,13,5

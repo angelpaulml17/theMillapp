@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- PAGE settings -->
+  <link rel="icon" href="https://templates.pingendo.com/assets/Pingendo_favicon.ico">
+  <title>mill</title>
+  <!-- CSS dependencies -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/colorful.css') }}">
+<script src="{{ url_for('static', filename='js/navbar-ontop.js') }}"></script>
+<script src="{{ url_for('static', filename='js/smooth-scroll.js') }}"></script>
+
+  <style> .service-box {
+    transition: transform 0.3s ease; 
+    cursor: pointer; 
+  }
+
+  .service-box:hover {
+    transform: scale(1.1); }
+</style>
+  <style> .team-names .display-4 {
+      font-size: 1.5rem; 
+    }
+  </style>
+  <style>
+    .custom-select {
+      font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 1em;
+        padding: 8px 12px; /* Padding inside the dropdown */
+        
+        border-radius: 4px; /* Rounded corners */
+        background-color: white; /* Background color */
+        width: 100%; /* Full width */
+        box-sizing: border-box; /* Includes padding and border in the width */
+    }
+    .custom-select:focus {
+        outline: none; /* Removes default focus outline */
+        border-color: #6c757d; /* Darker blue border on focus */
+        box-shadow: 0 0 8px rgba(0,123,255,.5); /* Adds glow effect on focus */
+    }
+    /* Attempting to style option elements */
+        .custom-select option {
+            background-color: white; /* Default background */
+            color: black; /* Text color */
+        }
+        .custom-select option:hover {
+            background-color: #6c757d; /* Hover background color */
+            color: white; /* Hover text color */
+        }
+</style>
+</head>
+
+<body>
+  
+    
+  <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#"><b class="text-danger">MILL</b></a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar3SupportedContent" aria-controls="navbar3SupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+      <div class="collapse navbar-collapse text-center justify-content-end" id="navbar3SupportedContent">
+        <a class="btn navbar-btn btn-outline-light" href="#where">HOME</a>
+      </div>
+    </div>
+  </nav>
+  <div class="py-5 text-center cover d-flex flex-column bg-dark">
+    <div class="container my-auto">
+      <div class="row">
+        <div class="mx-auto col-lg-6 col-md-8">
+          <h1 class="display-1 mb-0 mt-5 big-title text-secondary" style="">MILL</h1>
+          <h3 class="mb-4"><b>Insights at your disposal</b></h3>
+          <p class="shadow-none">Choose from a wide range of demographics and regions to gather insights</p>
+        </div>
+      </div>
+    </div>
+    <div class="container mt-auto">
+      <div class="row">
+        <div class="mx-auto col-lg-6 col-md-8 col-10">
+          <a href="#mission"><i class="d-block fa fa-angle-down fa-2x"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h4 class="">CHOOSE THE INDICATORS</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <form id="data-form" action="{{ url_for('map') }}" method="POST">
+    <!-- Form content with radio buttons -->
+    <!-- ... -->
+    <div class="py-5 bg-dark" style="	background-image: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.8));	background-position: top left;	background-size: 100%;	background-repeat: repeat;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="list-group">
+              <label class="list-group-item list-group-item-action active list-group-item-danger">REGION</label>
+              <select class="form-control list-group-item list-group-item-action custom-select"  name="region" required>
+                <option value="Greater Manchester">Greater Manchester</option>
+                <option value="West Midlands">West Midlands</option>
+              </select>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="py-5 bg-dark" style="	background-image: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.8));	background-position: top left;	background-size: 100%;	background-repeat: repeat;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="list-group">
+              <label class="list-group-item list-group-item-action active list-group-item-danger">DATA LEVEL</label>
+              <select class="form-control list-group-item list-group-item-action custom-select"  name="dataLevel" required>
+                <option value="LSOA">LSOA</option>
+                <option value="MSOA">MSOA</option>
+                
+                <option value="LTLA">LTLA</option>
+                
+              </select>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="py-5 bg-dark" style="	background-image: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.8));	background-position: top left;	background-size: 100%;	background-repeat: repeat;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="list-group">
+              <label class="list-group-item list-group-item-action active list-group-item-danger text-white">DEMOGRAPHIC CATEGORY</label>
+              <select class="form-control list-group-item list-group-item-action custom-select"  name="demographicCategory" required>
+                <option value="Number of usual residents">Number of usual residents in households and communal establishments</option>
+                <option value="Legal partnership status">Legal partnership status</option>
+                <option value="Household composition">Household composition</option>
+                <option value="Passports held">Passports held</option>
+                <option value="Population density">Population density</option>
+                <option value="Sex">Sex</option>
+                <option value="Household Deprivation">Household Deprivation</option>
+                <option value="Year of arrival in UK">Year of arrival in UK</option>
+                <option value="Length of residence">Length of residence</option>
+                <option value="Household size">Household size</option>
+                <option value="Age of arrival in UK">Age of arrival in the UK</option>
+                <option value="Migrant Indicator">Migrant Indicator</option>
+                <option value="Number of non-UK short-term residents by sex">Number of non-UK short-term residents by sex</option>
+                <option value="Ethnic Group">Ethnic Group</option>
+                <option value="Number of Households">Number of Households</option>
+              </select>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Submit Button -->
+    <div class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <button type="submit" id="submit-button" class="btn btn-primary" >Generate Map</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+  <!-- Placeholders for Map and Chart -->
+
+  <!-- Services Section -->
+  
+
+
+
+
+  
+  <div class="py-5 text-center" id="who">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12"> </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="mb-4 text-danger">&nbsp;Our Team</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5 bg-dark" style="">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-5 col-5 w-50" style="">
+          <h1 class="display-4 w-100" style="font-size: 30px;">Angel Paul<br>Abdul Aziz<br>Abhinandan Das<br>Evelyn Dick<br>Aisha Mbarak</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <!-- Script: Smooth scrolling between anchors in the same page -->
+  <script src="static/js/smooth-scroll.js"></script>
+  <!-- Add jQuery for AJAX if not already included -->
+
+<script>
+  $('form').submit(function(e) {
+    e.preventDefault();  // prevent the default form submission
+    $.ajax({
+        url: '/map',
+        type: 'POST',
+        data: $(this).serialize(),  // serialize the form data
+        success: function(response) {
+            console.log(response);
+            window.location.href = response.redirect;
+        },
+        error: function(error) {
+            console.log(error);
+        }
+    });
+});
+</script>
+</body>
+
+</html>
