@@ -268,7 +268,7 @@ def map():
     base_dir = os.path.dirname(__file__)  # Get the directory where the script runs
     level = os.path.join(base_dir, level)
     LevelPath = os.path.join(base_dir, LevelPath)
-    code = os.path.join(base_dir, code)
+    
     print(level)
     print(LevelPath)
     session['level'] = level
