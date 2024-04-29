@@ -29,242 +29,242 @@ def map():
     if region=='Greater Manchester':
         folder='GM'
         if data_level=='LSOA':
-            LevelPath='Boundaries-20240419T224611Z-001\Boundaries\GM_Boundaries\GM_LSOAs\GM_LSOAs.shp'
+            LevelPath='Boundaries-20240419T224611Z-001/Boundaries/GM_Boundaries/GM_LSOAs/GM_LSOAs.shp'
             code='code'
             if demographic_category=='Number of usual residents':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts001\census2021-ts001-lsoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts001/census2021-ts001-lsoa-filtered.csv'
             elif demographic_category=='Legal partnership status':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts002\census2021-ts002-lsoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts002/census2021-ts002-lsoa-filtered.csv'
             elif demographic_category=='Household composition':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts003\census2021-ts003-lsoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts003/census2021-ts003-lsoa-filtered.csv'
             
             elif demographic_category=='Passports held':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts005\census2021-ts005-lsoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts005/census2021-ts005-lsoa-filtered.csv'
             elif demographic_category=='Population density':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts006\census2021-ts006-lsoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts006/census2021-ts006-lsoa-filtered.csv'
             
             elif demographic_category=='Sex':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts008\census2021-ts008-lsoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts008/census2021-ts008-lsoa-filtered.csv'
             
             elif demographic_category=='Household Deprivation':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts011\census2021-ts011-lsoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts011/census2021-ts011-lsoa-filtered.csv'
             elif demographic_category=='Year of arrival in UK':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts015\census2021-ts015-lsoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts015/census2021-ts015-lsoa-filtered.csv'
             elif demographic_category=='Length of residence':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts016\census2021-ts016-lsoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts016/census2021-ts016-lsoa-filtered.csv'
             elif demographic_category=='Household size':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts017\census2021-ts017-lsoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts017/census2021-ts017-lsoa-filtered.csv'
             elif demographic_category=='Age of arrival in the UK':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts018\census2021-ts018-lsoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts018/census2021-ts018-lsoa-filtered.csv'
             elif demographic_category=='Migrant Indicator':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts019\census2021-ts019-lsoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts019/census2021-ts019-lsoa-filtered.csv'
             elif demographic_category=='Number of non-UK short-term residents by sex':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts020\census2021-ts020-lsoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts020/census2021-ts020-lsoa-filtered.csv'
             elif demographic_category=='Ethnic Group':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts021\census2021-ts021-lsoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts021/census2021-ts021-lsoa-filtered.csv'
             elif demographic_category=='Number of Households':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts041\census2021-ts041-lsoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts041/census2021-ts041-lsoa-filtered.csv'
             else:
                 print('No Demographic data selected')
         elif data_level=='MSOA':
-            LevelPath='Boundaries-20240419T224611Z-001\Boundaries\GM_Boundaries\GM_MSOAs\GM_MSOAs.shp'
+            LevelPath='Boundaries-20240419T224611Z-001/Boundaries/GM_Boundaries/GM_MSOAs/GM_MSOAs.shp'
             code='msoa21cd'
             if demographic_category=='Number of usual residents':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts001\census2021-ts001-msoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts001/census2021-ts001-msoa-filtered.csv'
             elif demographic_category=='Legal partnership status':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts002\census2021-ts002-msoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts002/census2021-ts002-msoa-filtered.csv'
             elif demographic_category=='Household composition':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts003\census2021-ts003-msoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts003/census2021-ts003-msoa-filtered.csv'
            
             elif demographic_category=='Passports held':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts005\census2021-ts005-msoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts005/census2021-ts005-msoa-filtered.csv'
             elif demographic_category=='Population density':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts006\census2021-ts006-msoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts006/census2021-ts006-msoa-filtered.csv'
            
             elif demographic_category=='Sex':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts008\census2021-ts008-msoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts008/census2021-ts008-msoa-filtered.csv'
             
             elif demographic_category=='Household Deprivation':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts011\census2021-ts011-msoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts011/census2021-ts011-msoa-filtered.csv'
             elif demographic_category=='Year of arrival in UK':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts015\census2021-ts015-msoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts015/census2021-ts015-msoa-filtered.csv'
             elif demographic_category=='Length of residence':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts016\census2021-ts016-msoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts016/census2021-ts016-msoa-filtered.csv'
             elif demographic_category=='Household size':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts017\census2021-ts017-msoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts017/census2021-ts017-msoa-filtered.csv'
             elif demographic_category=='Age of arrival in the UK':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts018\census2021-ts018-msoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts018/census2021-ts018-msoa-filtered.csv'
             elif demographic_category=='Migrant Indicator':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts019\census2021-ts019-msoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts019/census2021-ts019-msoa-filtered.csv'
             elif demographic_category=='Number of non-UK short-term residents by sex':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts020\census2021-ts020-msoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts020/census2021-ts020-msoa-filtered.csv'
             elif demographic_category=='Ethnic Group':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts021\census2021-ts021-msoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts021/census2021-ts021-msoa-filtered.csv'
             elif demographic_category=='Number of Households':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts041\census2021-ts041-msoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts041/census2021-ts041-msoa-filtered.csv'
             
             else:
                 print('No Demographic data selected')
         elif data_level=='LTLA':
-            LevelPath='Boundaries-20240419T224611Z-001\Boundaries\GM_Boundaries\GM_LAs\GM.shp'
+            LevelPath='Boundaries-20240419T224611Z-001/Boundaries/GM_Boundaries/GM_LAs/GM.shp'
             code='geo_code'
             if demographic_category=='Number of usual residents':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts001\census2021-ts001-ltla-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts001/census2021-ts001-ltla-filtered.csv'
             elif demographic_category=='Legal partnership status':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts002\census2021-ts002-ltla-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts002/census2021-ts002-ltla-filtered.csv'
             elif demographic_category=='Household composition':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts003\census2021-ts003-ltla-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts003/census2021-ts003-ltla-filtered.csv'
            
             elif demographic_category=='Passports held':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts005\census2021-ts005-ltla-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts005/census2021-ts005-ltla-filtered.csv'
             elif demographic_category=='Population density':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts006\census2021-ts006-ltla-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts006/census2021-ts006-ltla-filtered.csv'
             
             elif demographic_category=='Sex':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts008\census2021-ts008-ltla-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts008/census2021-ts008-ltla-filtered.csv'
             
             elif demographic_category=='Household Deprivation':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts011\census2021-ts011-ltla-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts011/census2021-ts011-ltla-filtered.csv'
             elif demographic_category=='Year of arrival in UK':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts015\census2021-ts015-ltla-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts015/census2021-ts015-ltla-filtered.csv'
             elif demographic_category=='Length of residence':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts016\census2021-ts016-ltla-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts016/census2021-ts016-ltla-filtered.csv'
             elif demographic_category=='Household size':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts017\census2021-ts017-ltla-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts017/census2021-ts017-ltla-filtered.csv'
             elif demographic_category=='Age of arrival in the UK':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts018\census2021-ts018-ltla-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts018/census2021-ts018-ltla-filtered.csv'
             elif demographic_category=='Migrant Indicator':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts019\census2021-ts019-ltla-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts019/census2021-ts019-ltla-filtered.csv'
             elif demographic_category=='Number of non-UK short-term residents by sex':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts020\census2021-ts020-ltla-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts020/census2021-ts020-ltla-filtered.csv'
             elif demographic_category=='Ethnic Group':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts021\census2021-ts021-ltla-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts021/census2021-ts021-ltla-filtered.csv'
             elif demographic_category=='Number of Households':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts041\census2021-ts041-ltla-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts041/census2021-ts041-ltla-filtered.csv'
             
             else:
                 print('No Demographic data selected')
         elif data_level=='UTLA':
-            LevelPath='Boundaries-20240419T224611Z-001\Boundaries\GM_Boundaries\GM_OAs\GM_OAs.shp'
+            LevelPath='Boundaries-20240419T224611Z-001/Boundaries/GM_Boundaries/GM_OAs/GM_OAs.shp'
     elif region=='West Midlands':
         if data_level=='LSOA':
-            LevelPath='Boundaries-20240419T224611Z-001\Boundaries\WM_Boundaries\WM_LSOAs\WM_LSOAs.shp'
+            LevelPath='Boundaries-20240419T224611Z-001/Boundaries/WM_Boundaries/WM_LSOAs/WM_LSOAs.shp'
             code='lsoa21cd'
             if demographic_category=='Number of usual residents':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts001\census2021-ts001-lsoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts001/census2021-ts001-lsoa-filtered.csv'
             elif demographic_category=='Legal partnership status':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts002\census2021-ts002-lsoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts002/census2021-ts002-lsoa-filtered.csv'
             elif demographic_category=='Household composition':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts003\census2021-ts003-lsoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts003/census2021-ts003-lsoa-filtered.csv'
             
             elif demographic_category=='Passports held':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts005\census2021-ts005-lsoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts005/census2021-ts005-lsoa-filtered.csv'
             elif demographic_category=='Population density':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts006\census2021-ts006-lsoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts006/census2021-ts006-lsoa-filtered.csv'
             
             elif demographic_category=='Sex':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts008\census2021-ts008-lsoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts008/census2021-ts008-lsoa-filtered.csv'
             
             elif demographic_category=='Household Deprivation':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts011\census2021-ts011-lsoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts011/census2021-ts011-lsoa-filtered.csv'
             elif demographic_category=='Year of arrival in UK':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts015\census2021-ts015-lsoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts015/census2021-ts015-lsoa-filtered.csv'
             elif demographic_category=='Length of residence':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts016\census2021-ts016-lsoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts016/census2021-ts016-lsoa-filtered.csv'
             elif demographic_category=='Household size':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts017\census2021-ts017-lsoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts017/census2021-ts017-lsoa-filtered.csv'
             elif demographic_category=='Age of arrival in the UK':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts018\census2021-ts018-lsoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts018/census2021-ts018-lsoa-filtered.csv'
             elif demographic_category=='Migrant Indicator':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts019\census2021-ts019-lsoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts019/census2021-ts019-lsoa-filtered.csv'
             elif demographic_category=='Number of non-UK short-term residents by sex':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts020\census2021-ts020-lsoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts020/census2021-ts020-lsoa-filtered.csv'
             elif demographic_category=='Ethnic Group':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts021\census2021-ts021-lsoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts021/census2021-ts021-lsoa-filtered.csv'
             elif demographic_category=='Number of Households':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts041\census2021-ts041-lsoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts041/census2021-ts041-lsoa-filtered.csv'
             else:
                 print('No Demographic data selected')
         elif data_level=='MSOA':
-            LevelPath='Boundaries-20240419T224611Z-001\Boundaries\WM_Boundaries\WM_MSOAs\WM_MSOAs.shp'
+            LevelPath='Boundaries-20240419T224611Z-001/Boundaries/WM_Boundaries/WM_MSOAs/WM_MSOAs.shp'
             code='msoa21cd'
             if demographic_category=='Number of usual residents':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts001\census2021-ts001-msoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts001/census2021-ts001-msoa-filtered.csv'
             elif demographic_category=='Legal partnership status':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts002\census2021-ts002-msoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts002/census2021-ts002-msoa-filtered.csv'
             elif demographic_category=='Household composition':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts003\census2021-ts003-msoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts003/census2021-ts003-msoa-filtered.csv'
             
             elif demographic_category=='Passports held':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts005\census2021-ts005-msoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts005/census2021-ts005-msoa-filtered.csv'
             elif demographic_category=='Population density':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts006\census2021-ts006-msoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts006/census2021-ts006-msoa-filtered.csv'
             
             elif demographic_category=='Sex':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts008\census2021-ts008-msoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts008/census2021-ts008-msoa-filtered.csv'
             
             elif demographic_category=='Household Deprivation':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts011\census2021-ts011-msoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts011/census2021-ts011-msoa-filtered.csv'
             elif demographic_category=='Year of arrival in UK':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts015\census2021-ts015-msoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts015/census2021-ts015-msoa-filtered.csv'
             elif demographic_category=='Length of residence':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts016\census2021-ts016-msoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts016/census2021-ts016-msoa-filtered.csv'
             elif demographic_category=='Household size':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts017\census2021-ts017-msoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts017/census2021-ts017-msoa-filtered.csv'
             elif demographic_category=='Age of arrival in the UK':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts018\census2021-ts018-msoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts018/census2021-ts018-msoa-filtered.csv'
             elif demographic_category=='Migrant Indicator':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts019\census2021-ts019-msoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts019/census2021-ts019-msoa-filtered.csv'
             elif demographic_category=='Number of non-UK short-term residents by sex':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts020\census2021-ts020-msoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts020/census2021-ts020-msoa-filtered.csv'
             elif demographic_category=='Ethnic Group':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts021\census2021-ts021-msoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts021/census2021-ts021-msoa-filtered.csv'
             elif demographic_category=='Number of Households':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts041\census2021-ts041-msoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts041/census2021-ts041-msoa-filtered.csv'
             
             else:
                 print('No Demographic data selected')
         elif data_level=='LTLA':
-            LevelPath='Boundaries-20240419T224611Z-001\Boundaries\WM_Boundaries\WM_LAs\WM_LAs.shp'
+            LevelPath='Boundaries-20240419T224611Z-001/Boundaries/WM_Boundaries/WM_LAs/WM_LAs.shp'
             code='ltla22cd'
             if demographic_category=='Number of usual residents':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts001\census2021-ts001-ltla-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts001/census2021-ts001-ltla-filtered.csv'
             elif demographic_category=='Legal partnership status':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts002\census2021-ts002-ltla-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts002/census2021-ts002-ltla-filtered.csv'
             elif demographic_category=='Household composition':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts003\census2021-ts003-ltla-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts003/census2021-ts003-ltla-filtered.csv'
             
             elif demographic_category=='Passports held':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts005\census2021-ts005-ltla-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts005/census2021-ts005-ltla-filtered.csv'
             elif demographic_category=='Population density':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts006\census2021-ts006-ltla-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts006/census2021-ts006-ltla-filtered.csv'
             
             elif demographic_category=='Sex':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts008\census2021-ts008-ltla-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts008/census2021-ts008-ltla-filtered.csv'
             
             elif demographic_category=='Household Deprivation':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts011\census2021-ts011-ltla-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts011/census2021-ts011-ltla-filtered.csv'
             elif demographic_category=='Year of arrival in UK':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts015\census2021-ts015-ltla-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts015/census2021-ts015-ltla-filtered.csv'
             elif demographic_category=='Length of residence':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts016\census2021-ts016-ltla-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts016/census2021-ts016-ltla-filtered.csv'
             elif demographic_category=='Household size':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts017\census2021-ts017-ltla-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts017/census2021-ts017-ltla-filtered.csv'
             elif demographic_category=='Age of arrival in the UK':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts018\census2021-ts018-ltla-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts018/census2021-ts018-ltla-filtered.csv'
             elif demographic_category=='Migrant Indicator':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts019\census2021-ts019-ltla-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts019/census2021-ts019-ltla-filtered.csv'
             elif demographic_category=='Number of non-UK short-term residents by sex':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts020\census2021-ts020-ltla-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts020/census2021-ts020-ltla-filtered.csv'
             elif demographic_category=='Ethnic Group':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts021\census2021-ts021-ltla-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts021/census2021-ts021-ltla-filtered.csv'
             elif demographic_category=='Number of Households':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts041\census2021-ts041-ltla-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts041/census2021-ts041-ltla-filtered.csv'
             
             else:
                 print('No Demographic data selected')
         elif data_level=='UTLA':
-            LevelPath='Boundaries-20240419T224611Z-001\Boundaries\WM_Boundaries\WM_OAs\WM_OAs.shp'
+            LevelPath='Boundaries-20240419T224611Z-001/Boundaries/WM_Boundaries/WM_OAs/WM_OAs.shp'
     base_dir = os.path.dirname(__file__)  # Get the directory where the script runs
     level = os.path.join(base_dir, level)
     LevelPath = os.path.join(base_dir, LevelPath)
