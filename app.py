@@ -265,6 +265,10 @@ def map():
                 print('No Demographic data selected')
         elif data_level=='UTLA':
             LevelPath='Boundaries-20240419T224611Z-001\Boundaries\WM_Boundaries\WM_OAs\WM_OAs.shp'
+    base_dir = os.path.dirname(__file__)  # Get the directory where the script runs
+    level = os.path.join(base_dir, level)
+    LevelPath = os.path.join(base_dir, LevelPath)
+    code = os.path.join(base_dir, code)
     print(level)
     print(LevelPath)
     session['level'] = level
