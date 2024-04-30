@@ -50,33 +50,18 @@
             background-color: #6c757d; /* Hover background color */
             color: white; /* Hover text color */
         }
-        #map-chart-container {
-            display: flex;
-            flex-wrap: nowrap; /* Ensure they are in one line */
-            justify-content: space-between; /* Add space between the containers */
-          }
-          
-          #map-container {
-            flex: 1; /* Take up only the necessary space */
-            height: 400px; /* Fixed height */
-          }
-          
-          #chart-container {
-            flex: 1; /* Take up only the necessary space */
-            height: 400px; /* Fixed height */
-            padding-left: 20px; /* Add some space between the map and the chart */
-          }
-          @media (max-width: 768px) {
-            #map-chart-container {
-              flex-wrap: wrap; /* Allow containers to wrap on smaller screens */
-            }
-          
-            #map-container, #chart-container {
-              flex-basis: 100%; /* Each container takes full width on smaller screens */
-              max-width: 100%; /* Prevents containers from exceeding the viewport width */
-              padding: 0; /* Adjust padding as necessary */
-            }
-          }
+        #map-chart-container2 {
+          display: flex;  /* Enables flexbox */
+          flex-direction: row;  /* Arranges children in a row */
+          width: 100%;  /* Full width of its parent */
+          align-items: stretch;  /* Stretches the children to fill the container height */
+      }
+      
+      .container2 {
+          flex: 1;  /* Each child will take up equal space */
+          padding: 10px;  /* Optional: Adds some space inside the containers */
+      }
+        
           
 </style>
 </head>
@@ -208,11 +193,18 @@
     </div>
 </form>
   <!-- Placeholders for Map and Chart -->
+  <div id="map-chart">
   <div id="map-chart-container">
-<div class="container" id="map-container" style="width: 50%; height: 400px; float: left;">{{map_data|safe}}</div>
-<div class="container" id="chart-container" style="width: 50%; height: auto; float: right;"></div>
+<div class="container" id="map-container" style="width: 80%; height: 800px;">{{map_data|safe}}</div>
   </div>
- 
+</div>
+<div id="map-chart2">
+  <div id="map-chart-container2">
+<div class="container2" id="chart-container" style="width: 50%" ></div>
+<div class="container2" id="stats-container" style="width: 50%" >{{ graph_html|safe }} </div>
+
+  </div>
+</div>
   <div class="py-5 text-center" id="who">
     <div class="container">
       <div class="row">

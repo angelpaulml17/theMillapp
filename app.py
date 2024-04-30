@@ -7,6 +7,9 @@ from flask import Flask, render_template, request
 from flask import Flask, render_template, jsonify, request, session, send_file
 import os
 from flask import session, redirect, url_for, render_template
+import geopandas as gpd
+import pandas as pd
+import plotly.graph_objects as go
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
 
@@ -25,7 +28,7 @@ def map():
     print(demographic_category)
     print(region)
     print(data_level)
-    
+   
     if region=='Greater Manchester':
         folder='GM'
         if data_level=='LSOA':
@@ -279,6 +282,24 @@ def map():
 
     # Redirect to a new page that will render the map
     return jsonify({'redirect': url_for('show_map')})
+def calculate_region_stats(merged_gdf, indicator_column):
+    # Calculate minimum, maximum, and average
+    min_value = merged_gdf[indicator_column].min()
+    max_value = merged_gdf[indicator_column].max()
+    avg_value = merged_gdf[indicator_column].mean()
+
+    # Get the region(s) with min and max values
+    min_region = merged_gdf[merged_gdf[indicator_column] == min_value]['geography'].iloc[0]
+    max_region = merged_gdf[merged_gdf[indicator_column] == max_value]['geography'].iloc[0]
+
+    # Create a dictionary to return the results
+    stats = {
+        "labels": ["Minimum", "Average", "Maximum"],
+        "values": [min_value, avg_value, max_value],
+        "regions": [min_region, "Average", max_region]
+    }
+    
+    return stats
 
 @app.route('/show_map')
 def show_map():
@@ -288,8 +309,29 @@ def show_map():
     code=session.get('code')
     map_folium= create_interactive_map(LevelPath, level, code, 'geography code', ['date', 'geography'])
     map_html = map_folium._repr_html_() if map_folium else ""
+    gdf = gpd.read_file(LevelPath)
+    csv_data = pd.read_csv(level)
+    csv_data['geography code'] = csv_data['geography code'].astype(str)
+    gdf[code] = gdf[code].astype(str)
+    merged_gdf = gdf.merge(csv_data, left_on=code, right_on='geography code', how='inner')
     # Render the MapWithHTML template with the map data
-    return render_template('MapWithHTML.html', map_data=map_html)
+    data_for_classification = csv_data.columns[3]
+    stats = calculate_region_stats(merged_gdf, data_for_classification)
+    keyval=data_for_classification.split(':')[0]
+    # Create the Plotly figure
+    fig = go.Figure([go.Bar(x=stats['regions'], y=stats['values'], text=stats['values'], textposition='auto', marker_color='#db0a5b')])
+
+    fig.update_layout(
+        title=f'Summary Statistics for {keyval}',
+        xaxis_tickangle=-90,
+        xaxis_title='Region',
+        yaxis_title='Value',
+        plot_bgcolor='rgba(0,0,0,0)'
+    )
+
+    # Convert plotly figure to HTML
+    graph_html = fig.to_html(full_html=False)
+    return render_template('MapWithHTML.html', map_data=map_html, graph_html=graph_html)
 
 @app.route('/download_chart/<region_id>')
 def download_chart(region_id):
@@ -313,13 +355,18 @@ def generate_chart(data):
     label = [key.split(':')[0] for key in data.keys()]
     print(labels)
     # Calculate statistics
-    min_value = min(values)
-    max_value = max(values)
-    avg_value = sum(values) / len(values)
-
+    
+    maxvals=[]
+    for key, value in data.items():
+        if 'Total' not in key:  # Check if 'Total' is not in the column name
+            # Extracting the part of the label after ': ' and before ';', if present
+            
+            maxvals.append(value)
     plt.switch_backend('Agg')
     buf = io.BytesIO()
-    
+    min_value = min(values)
+    max_value = max(maxvals)
+    avg_value = sum(maxvals) / len(maxvals)
     plt.figure(figsize=(8, 4))  # Aspect ratio 2:1, for example
 
     bars = plt.bar(labels, values, color='#db0a5b')
@@ -344,5 +391,6 @@ def generate_chart(data):
     return buf
 
 if __name__ == '__main__':
-    #app.run(debug=True, threaded=False)
-    app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)))
+    app.run(debug=True, threaded=False)
+    #app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)))
+  
