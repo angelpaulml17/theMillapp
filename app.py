@@ -13,7 +13,11 @@ import plotly.graph_objects as go
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
 
+import streamlit as st
+import sys
 
+python_version = sys.version
+st.write("Python version used by this Streamlit app:", python_version)
 @app.route('/')
 def index():
     # Generate the map when the index page is loaded
