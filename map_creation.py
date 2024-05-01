@@ -120,17 +120,25 @@ def create_interactive_map(shapefile_path, data_csv_path, merge_on_shapefile, me
     csv_data[merge_on_csv] = csv_data[merge_on_csv].astype(str)
     gdf[merge_on_shapefile] = gdf[merge_on_shapefile].astype(str)
     merged_gdf = gdf.merge(csv_data, left_on=merge_on_shapefile, right_on=merge_on_csv, how='inner')
-    data_for_classification = csv_data.columns[3]
-    # Classify the data
-    classifier = mc.Quantiles(merged_gdf[data_for_classification], k=5)
+    # Compute the average of columns from the 4th to the end
+    data_for_classification = csv_data.iloc[:, 3:].mean(axis=1)
+
+    # Add this average data back to the merged GeoDataFrame
+    merged_gdf['avg_value'] = data_for_classification
+
+    # Classify the data based on the average values
+    classifier = mc.Quantiles(merged_gdf['avg_value'], k=5)
     merged_gdf['category'] = classifier.yb  # Adds the bin/category to the dataframe
-    value_min = merged_gdf[data_for_classification].min()
-    value_max = merged_gdf[data_for_classification].max()
+
+    # Get min and max of the average values for the legend
+    value_min = merged_gdf['avg_value'].min()
+    value_max = merged_gdf['avg_value'].max()
+
     # Define color scheme for 5 bins
-    colors=['#fec5af', '#f4979a', '#eb6885', '#e33970', '#db0a5b']
-    color_scale = folium.LinearColormap(['#fec5af', '#f4979a', '#eb6885', '#e33970', '#db0a5b'], vmin=0, vmax=4)
+    colors = ['#fec5af', '#f4979a', '#eb6885', '#e33970', '#db0a5b']
+    color_scale = folium.LinearColormap(colors, vmin=0, vmax=4)
     merged_gdf['color'] = merged_gdf['category'].apply(lambda x: color_scale(x))
-    
+
 
         # Add legend to map
     legend_html = generate_legend(colors, value_min, value_max)
@@ -147,13 +155,13 @@ def create_interactive_map(shapefile_path, data_csv_path, merge_on_shapefile, me
             print(tooltip_fields)
         else:
             tooltip_fields = list(csv_data.columns)
-
+        tooltip_fields.append('avg_value')
 
         # Add GeoJson layer
         folium.GeoJson(
             geojson_data,
             style_function=lambda x: {'fillColor': merged_gdf.loc[merged_gdf['geography code'] == x['properties']['geography code'], 'color'].values[0],
-                                      'color': 'black', 'weight': 1, 'fillOpacity': 0.7},
+                                      'color': 'black', 'weight': 0.1, 'fillOpacity': 0.7},
             tooltip=folium.features.GeoJsonTooltip(fields=tooltip_fields)
         ).add_to(map_folium)
         # Define your custom color scale
