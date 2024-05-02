@@ -1,4 +1,5 @@
 import base64
+import random
 from flask import Flask, render_template, send_file
 import matplotlib.pyplot as plt
 import io
@@ -396,4 +397,6 @@ def generate_chart(data):
 
 if __name__ == '__main__':
     #app.run(debug=True, threaded=False)
-    app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 6000)))
+    #app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 6000)))
+    random_port = random.randint(5000, 9999)
+    app.run(debug=True, port=random_port)
