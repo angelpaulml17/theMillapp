@@ -396,10 +396,4 @@ def generate_chart(data):
 
 if __name__ == '__main__':
     #app.run(debug=True, threaded=False)
-<<<<<<< HEAD
     app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 8000)))
-  
-=======
-    app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 9000)))
-  
->>>>>>> 40af7f24cf0cdb2df28eab22ca99c769d927dbed
