@@ -399,4 +399,4 @@ if __name__ == '__main__':
     #app.run(debug=True, threaded=False)
     #app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 6000)))
     random_port = random.randint(5000, 9999)
-    app.run(debug=True, port=random_port)
+    app.run(port=random_port)

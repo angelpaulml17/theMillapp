@@ -1,0 +1,7 @@
+runtime: python311  # Specify the Python runtime
+
+entrypoint: gunicorn -b :$PORT main:app  # Adjust for your app setup
+
+handlers:
+- url: /.*
+  script: auto
