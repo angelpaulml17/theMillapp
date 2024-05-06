@@ -35,13 +35,6 @@ def get_data_for_region(level, LevelPath,code, region_id, exclude_columns):
         return None
     
 def add_clickable_markers(map_folium, gdf, unique_id_column):
-    # geojson_layer = GeoJson(
-    #     gdf.to_json(),
-    #     style_function=lambda x: {'fillColor': 'blue', 'color': 'black', 'weight': 0.5},
-    #     tooltip=folium.features.GeoJsonTooltip(fields=gdf.columns.tolist())
-    # )
-    # map_folium.add_child(geojson_layer)
-
     # Add custom JavaScript for handling clicks
     script = f"""
     <script>
@@ -117,6 +110,7 @@ def generate_legend(colors, value_min, value_max):
 def create_interactive_map(shapefile_path, data_csv_path, merge_on_shapefile, merge_on_csv,  exclude_columns=None):
     # Load and prepare data
     gdf = gpd.read_file(shapefile_path)
+    print(gdf)
     csv_data = pd.read_csv(data_csv_path)
     csv_data[merge_on_csv] = csv_data[merge_on_csv].astype(str)
     gdf[merge_on_shapefile] = gdf[merge_on_shapefile].astype(str)

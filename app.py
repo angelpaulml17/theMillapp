@@ -282,8 +282,6 @@ def map():
     session['level'] = level
     session['LevelPath'] = LevelPath
     session['code'] = code
-    # Assuming map_folium is a variable containing data you want to pass
-    #session['map_data'] = map_folium._repr_html_()  # Store the map's HTML representation in the session
 
     # Redirect to a new page that will render the map
     return jsonify({'redirect': url_for('show_map')})
@@ -354,9 +352,7 @@ def download_chart(region_id):
         return jsonify({'error': 'No data available for the requested region.'}), 404
 
 def generate_chart(data):
-    # Here, you generate the chart using matplotlib
-    #labels = [key.split(': ')[1].split(';')[0] for key in data.keys()]
-    #values = list(data.values())
+    
     # Filter keys: select only those whose names contain 'total'
     labels = [key.split(': ')[1].split(';')[0] for key in data.keys()]
     keys_to_labels = {key: key.split(': ')[1].split(';')[0] for key in data.keys()}
@@ -378,8 +374,6 @@ def generate_chart(data):
     maxvals=[]
     for key, value in data.items():
         if 'Total' not in key:  # Check if 'Total' is not in the column name
-            # Extracting the part of the label after ': ' and before ';', if present
-            
             maxvals.append(value)
     plt.switch_backend('Agg')
     buf = io.BytesIO()
@@ -413,7 +407,5 @@ def generate_chart(data):
     return buf
 
 if __name__ == '__main__':
-    #app.run(debug=True, threaded=False)
-    #app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 6000)))
     random_port = random.randint(5000, 9999)
     app.run(port=random_port)
