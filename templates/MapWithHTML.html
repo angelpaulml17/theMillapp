@@ -166,7 +166,7 @@
                 <option value="Year of arrival in UK">Year of arrival in UK</option>
                 <option value="Length of residence">Length of residence</option>
                 <option value="Household size">Household size</option>
-                <option value="Age of arrival in UK">Age of arrival in the UK</option>
+                <option value="Age of arrival in the UK">Age of arrival in the UK</option>
                 <option value="Migrant Indicator">Migrant Indicator</option>
                 <option value="Number of non-UK short-term residents by sex">Number of non-UK short-term residents by sex</option>
                 <option value="Ethnic Group">Ethnic Group</option>
@@ -232,6 +232,15 @@
   <script src="js/smooth-scroll.js"></script>
   <!-- Add jQuery for AJAX if not already included -->
   <script>
+    function downloadImage(dataUrl, filename) {
+      // Create an 'a' element with a link to the image data URL and programmatically click it to start download
+      var a = document.createElement('a');
+      a.href = dataUrl;
+      a.download = filename || 'download.png';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+  }
     $('form').submit(function(e) {
       e.preventDefault();  // prevent the default form submission
       $.ajax({

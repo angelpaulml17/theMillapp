@@ -182,7 +182,7 @@ def map():
             elif demographic_category=='Household size':
                 level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts017/census2021-ts017-lsoa-filtered.csv'
             elif demographic_category=='Age of arrival in the UK':
-                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts018/census2021-ts018-lsoa-filtered.csv'
+                level='Collective_Census_2021_folder_filtered-20240419T224609Z-001\Collective_Census_2021_folder_filtered\census2021-ts018\census2021-ts018-lsoa-filtered.csv'
             elif demographic_category=='Migrant Indicator':
                 level='Collective_Census_2021_folder_filtered-20240419T224609Z-001/Collective_Census_2021_folder_filtered/census2021-ts019/census2021-ts019-lsoa-filtered.csv'
             elif demographic_category=='Number of non-UK short-term residents by sex':
@@ -355,12 +355,26 @@ def download_chart(region_id):
 
 def generate_chart(data):
     # Here, you generate the chart using matplotlib
+    #labels = [key.split(': ')[1].split(';')[0] for key in data.keys()]
+    #values = list(data.values())
+    # Filter keys: select only those whose names contain 'total'
     labels = [key.split(': ')[1].split(';')[0] for key in data.keys()]
-    values = list(data.values())
+    keys_to_labels = {key: key.split(': ')[1].split(';')[0] for key in data.keys()}
+
+    # Filtering data items, initializing an empty dict to capture first occurrence
+    filtered_columns = {}
+    for key, value in data.items():
+        label = keys_to_labels[key]
+        if 'total' not in key.lower() and label in labels:
+            if label not in filtered_columns:  # Check if the label has already been added to filtered_columns
+                filtered_columns[label] = value  # Add it if not present
+
+    # Extracting the values of the filtered dictionary
+    values = list(filtered_columns.values())
     label = [key.split(':')[0] for key in data.keys()]
-    print(labels)
+    print(filtered_columns)
     # Calculate statistics
-    
+    titles=filtered_columns.keys()
     maxvals=[]
     for key, value in data.items():
         if 'Total' not in key:  # Check if 'Total' is not in the column name
@@ -370,17 +384,20 @@ def generate_chart(data):
     plt.switch_backend('Agg')
     buf = io.BytesIO()
     min_value = min(values)
-    max_value = max(maxvals)
-    avg_value = sum(maxvals) / len(maxvals)
+    max_value = max(values)
+    avg_value = sum(values) / len(values)
     plt.figure(figsize=(8, 4))  # Aspect ratio 2:1, for example
 
-    bars = plt.bar(labels, values, color='#db0a5b')
+    bars = plt.bar(titles, values, color='#db0a5b')
 
     # Highlight the min and max bars
     bars[values.index(min_value)].set_color('#fec5af')  # Color the min value bar
     bars[values.index(min_value)].set_label('Min Value')
     bars[values.index(max_value)].set_color('#f4979a')  # Color the max value bar
     bars[values.index(max_value)].set_label('Max Value')
+    for bar in bars:
+        yval = bar.get_height()
+        plt.text(bar.get_x() + bar.get_width() / 2, yval, f'{yval}', ha='center', va='bottom')
 
     # Add a horizontal line for the average
     plt.axhline(y=avg_value, color='k', linestyle='--', linewidth=1)

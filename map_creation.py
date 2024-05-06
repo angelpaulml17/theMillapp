@@ -75,6 +75,7 @@ document.addEventListener("DOMContentLoaded", function() {{
                         console.log(parent.document.getElementById('chart-container'));
                         if (data.img_data) {{
                             parent.document.getElementById('chart-container').innerHTML = `<img src="${{data.img_data}}" style="width:100%; height:100%;">`;
+                            parent.document.getElementById('chart-container').innerHTML += `<button onclick="downloadImage('${{data.img_data}}', '${{geographyCode}}.png')">Download Chart</button>`;
                         }} else {{
                             parent.document.getElementById('chart-container').innerHTML = 'No chart available.';
                         }}
