@@ -18,8 +18,10 @@ This is standalone visualisation tool to generate spatial analysis for journalis
 1. Download this zip file into your system and upzip it.
 2. Open the folder on Visual Studio Code or any other platform of your choice.
 3. Install at the necessary packages from the requirements.txt file:
+
        pip install -r requirements.txt
-4. Run the app.py file
+5. Run the app.py file
+
        python run app.py
-5. Copy paste the url generated on a browser.
+7. Copy paste the url generated on a browser.
  
