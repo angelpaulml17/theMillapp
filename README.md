@@ -12,7 +12,7 @@ This is standalone visualisation tool to generate spatial analysis for journalis
  -  app.py: Python file consisting flask servers to support routing
  -  map_creation.py: Python file that has the mail application logic
  -  requirements.txt: File that includes all the packages required to run the applocation
- -  Procfile, app.yaml, runtime.txt, vercel.py: Files created to deploy the app on multiple platforms
+ -  Procfile, app.yaml, runtime.txt, vercel.json: Files created to deploy the app on multiple platforms
 
 **Steps to get the appliction up and running:**
 1. Download this zip file into your system and upzip it.
