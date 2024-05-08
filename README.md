@@ -24,4 +24,10 @@ This is standalone visualisation tool to generate spatial analysis for journalis
 
        python run app.py
 7. Copy paste the url generated on a browser.
- 
+
+
+**App deployed on Heroku**
+
+https://the-mill-app-1a3201f18a65.herokuapp.com/
+
+Current status: Loads Maps for certain categories of West Midlands only, (West Midlands- LTLA- Ethnic Group)
